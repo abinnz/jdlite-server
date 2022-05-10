@@ -1,0 +1,24 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "jdlite-server",
+  "main": "main.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "vm": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:abinnz/jdlite-server.git"
+  },
+  "keywords": [
+    "jdlite-server"
+  ],
+  "author": "abinnz",
+  "license": "ISC"
+}
