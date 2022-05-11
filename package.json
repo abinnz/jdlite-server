@@ -6,6 +6,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
+    "url": "^0.11.0",
     "vm": "^0.1.0"
   },
   "devDependencies": {},

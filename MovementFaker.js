@@ -92,13 +92,21 @@ class MoveMentFaker {
   }
 }
 
-async function getBody($) {
-  const zf = new MoveMentFaker(null);
-  // const zf = new MoveMentFaker($.secretp, $.cookie);
+async function getBody() {
+  const zf = new MoveMentFaker();
   const ss = await zf.run();
-  
-  return ss;
+  return JSON.parse(ss);
+}
+
+function getBodyArray(count) {
+  const itemArray = [];
+  for (let i = 0; i < count; i++) {
+    const ss = getBody();
+    itemArray.push(ss);
+  }
+  return itemArray;
 }
 
 MoveMentFaker.getBody = getBody;
+MoveMentFaker.getBodyArray = getBodyArray;
 module.exports = MoveMentFaker;
