@@ -45,3 +45,6 @@ http://127.0.0.1:5889/batchLog?count=1
 ### 4、京东抢券讨论群
 欢迎加入讨论群，本仓库仅作为学习讨论   
 ![京东抢券讨论群](https://wx4.sinaimg.cn/orj360/800facaagy1h23l69br2yj20b40e0jtp.jpg)
+
+讨论群已满200，可以加微信，备注进讨论群   
+![微信号](https://wx4.sinaimg.cn/bmiddle/800facaagy1h28b7fqw82j20b40b4gmu.jpg)
