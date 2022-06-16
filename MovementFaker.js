@@ -6,20 +6,22 @@ const fs = require('fs').promises;
 const JS_REGEX = /smash-h5\/index\.js":(([\d\D])+?(!function([\d\D])+?)},"\.\/node_modules)/gmi
 const UA = 'okhttp/3.12.1;jdmall;android;version/9.5.4;build/88136;screen/1440x3007;os/11;network/wifi;';
 const SCRIPT_URL = 'https://storage11.360buyimg.com/tower/babelnode/js/vendors.683f5a61.js';
+const DEFAULT_LOG_ID = 'coupon_receive';
 let smashUtils;
 
 class MoveMentFaker {
   constructor() {
   }
 
-  async run() {
+  async run(logId) {
     if (!smashUtils) {
       await this.init();
     }
-
-    var t = Math.floor(1e7 + 9e7 * Math.random()).toString();
+    logId = logId || DEFAULT_LOG_ID;
+    // var t = Math.floor(1e7 + 9e7 * Math.random()).toString();
+    var t = smashUtils.getRandom(8);
     var e = smashUtils.get_risk_result({
-      id: t,
+      id: logId,
       data: {
         random: t
       }
@@ -92,16 +94,16 @@ class MoveMentFaker {
   }
 }
 
-async function getBody() {
+async function getBody(logId) {
   const zf = new MoveMentFaker();
-  const ss = await zf.run();
+  const ss = await zf.run(logId);
   return JSON.parse(ss);
 }
 
-function getBodyArray(count) {
+function getBodyArray(count, logId) {
   const itemArray = [];
   for (let i = 0; i < count; i++) {
-    const ss = getBody();
+    const ss = getBody(logId);
     itemArray.push(ss);
   }
   return itemArray;
