@@ -5,7 +5,7 @@ const { R_OK } = require('fs').constants;
 const fs = require('fs').promises;
 const JS_REGEX = /smash-h5\/index\.js":(([\d\D])+?(!function([\d\D])+?)},"\.\/node_modules)/gmi
 const UA = 'okhttp/3.12.1;jdmall;android;version/9.5.4;build/88136;screen/1440x3007;os/11;network/wifi;';
-const SCRIPT_URL = 'https://storage11.360buyimg.com/tower/babelnode/js/vendors.683f5a61.js';
+const SCRIPT_URL = 'https://storage11.360buyimg.com/tower/babelnode/smash-h5-c7dc1ed802.js';
 const DEFAULT_LOG_ID = 'coupon_receive';
 let smashUtils;
 
